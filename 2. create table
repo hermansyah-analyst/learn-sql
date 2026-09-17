@@ -1,0 +1,49 @@
+-- ========================================================
+-- Learn SQL From Scratch Series - Kelas23
+-- Episode 2: Creating E-Commerce Tables
+-- File: 02-create-tables.sql
+-- ========================================================
+
+-- Ensure we are using the correct database
+USE kelas23_db;
+
+
+-- 1. Create Customers Table
+-- Stores basic customer information and registration dates
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    name VARCHAR(100),
+    city VARCHAR(100),
+    signup_date DATE
+);
+
+
+-- 2. Create Products Table
+-- Stores catalog details, categories, and pricing
+CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(100),
+    category VARCHAR(50),
+    price INT
+);
+
+
+-- 3. Create Orders Table
+-- Tracks order metadata and connects orders to customers
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    order_date DATE
+);
+
+
+-- 4. Create Transactions Table
+-- Tracks itemized order details, quantities, total amounts, and payment statuses
+CREATE TABLE transactions (
+    transaction_id INT PRIMARY KEY,
+    order_id INT,
+    product_id INT,
+    quantity INT,
+    amount INT,
+    status VARCHAR(20)
+);
