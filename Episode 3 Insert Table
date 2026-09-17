@@ -1,0 +1,43 @@
+-- ========================================================
+-- Learn SQL From Scratch Series - Kelas23
+-- Episode 3: Inserting Sample Data
+-- File: 03-insert-data.sql
+-- ========================================================
+
+-- Ensure we are using the correct database
+USE kelas23_db;
+
+
+-- 1. Insert Data into Customers Table
+INSERT INTO customers VALUES
+(1, 'Andi', 'Jakarta', '2023-01-10'),
+(2, 'Budi', 'Bandung', '2023-02-15'),
+(3, 'Citra', 'Surabaya', '2023-03-20'),
+(4, 'Dewi', 'Jakarta', '2023-04-05');
+
+
+-- 2. Insert Data into Products Table
+INSERT INTO products VALUES
+(1, 'Laptop', 'Electronics', 10000),
+(2, 'Mouse', 'Electronics', 200),
+(3, 'Keyboard', 'Electronics', 500),
+(4, 'Chair', 'Furniture', 1500);
+
+
+-- 3. Insert Data into Orders Table
+INSERT INTO orders VALUES
+(1, 1, '2023-05-01'),
+(2, 1, '2023-05-03'),
+(3, 2, '2023-05-04'),
+(4, 3, '2023-05-06'),
+(5, 4, '2023-05-07');
+
+
+-- 4. Insert Data into Transactions Table
+INSERT INTO transactions VALUES
+(1, 1, 1, 1, 10000, 'success'),
+(2, 1, 2, 2, 400, 'success'),
+(3, 2, 3, 1, 500, 'failed'),
+(4, 3, 2, 1, 200, 'success'),
+(5, 4, 4, 1, 1500, 'success'),
+(6, 5, 1, 1, 10000, 'failed');
